@@ -1,0 +1,3 @@
+---
+- include_tasks: rpmfusion.yml
+  when: ansible_distribution in [ "Amazon", "RedHat", "CentOS", "Fedora", "Rocky", "AlmaLinux" ]

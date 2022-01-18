@@ -1,0 +1,20 @@
+---
+molecule_exceptions:
+  - variation: "Ubuntu*"
+    reason: "repo only supports RedHat/CentOS based systems"
+  - variation: "Debian*"
+    reason: "repo only supports RedHat/CentOS based systems"
+  - variation: "centos-stream9"
+    reason: "Not supported ATM (https://twitter.com/rpmfusion_team/status/1467405564317769735)"
+molecule_scenarios:
+  - scenario: "default"
+    ansible: ["2.10", "2.11", "2.12"]
+    platforms:
+      - "centos7"
+      - "centos-stream8"
+      - "ubi8"
+      - "fedora34"  # ?
+      - "fedora35"  # ?
+      - "amazonlinux"  # ?
+      - "rockylinux8"  # ?
+      - "almalinux8"  # ?
