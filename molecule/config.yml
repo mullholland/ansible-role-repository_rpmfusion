@@ -8,7 +8,7 @@ molecule_exceptions:
     reason: "Not supported ATM (https://twitter.com/rpmfusion_team/status/1467405564317769735)"
 molecule_scenarios:
   - scenario: "default"
-    ansible: ["2.10", "2.11", "2.12"]
+    ansible: ["previous", "current", "next"]
     platforms:
       - "centos7"
       - "centos-stream8"
