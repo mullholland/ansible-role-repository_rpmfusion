@@ -15,6 +15,7 @@ molecule_scenarios:
       - "ubi8"
       - "fedora34"  # ?
       - "fedora35"  # ?
+      - "fedora36"  # ?
       - "amazonlinux"  # ?
       - "rockylinux8"  # ?
       - "almalinux8"  # ?
