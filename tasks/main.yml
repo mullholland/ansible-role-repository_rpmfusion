@@ -1,3 +1,44 @@
 ---
-- include_tasks: rpmfusion.yml
+- name: Install rpmfusion repositories
+  block:
+
+    - name: Importing (free) key
+      ansible.builtin.rpm_key:
+        key: "{{ item }}"
+        state: present
+      register: result
+      until: result is succeeded
+      retries: 5
+      delay: 10
+      with_items:
+        - "{{ repository_rpmfusion_free_key[ansible_distribution][ansible_distribution_major_version] }}"
+      when: repository_rpmfusion_free_enable|bool
+
+    - name: Install Free RPM Fusion Repository
+      ansible.builtin.yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - "{{ repository_rpmfusion_free[ansible_distribution][ansible_distribution_major_version] }}"
+      when: repository_rpmfusion_free_enable|bool
+
+    - name: Importing (non-free) key
+      ansible.builtin.rpm_key:
+        key: "{{ item }}"
+        state: present
+      register: result
+      until: result is succeeded
+      retries: 5
+      delay: 10
+      with_items:
+        - "{{ repository_rpmfusion_nonfree_key[ansible_distribution][ansible_distribution_major_version] }}"
+      when: repository_rpmfusion_nonfree_enable|bool
+
+    - name: Install Nonfree RPM Fusion Repository
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - "{{ repository_rpmfusion_nonfree[ansible_distribution][ansible_distribution_major_version] }}"
+
   when: ansible_distribution in [ "Amazon", "RedHat", "CentOS", "Fedora", "Rocky", "AlmaLinux" ]
