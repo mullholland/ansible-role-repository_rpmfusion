@@ -1,7 +1,7 @@
 ---
 - name: Install rpmfusion repositories
+  when: ansible_distribution in [ "Amazon", "RedHat", "CentOS", "Fedora", "Rocky", "AlmaLinux" ]
   block:
-
     - name: Importing (free) key
       ansible.builtin.rpm_key:
         key: "{{ item }}"
@@ -40,5 +40,3 @@
         state: present
       with_items:
         - "{{ repository_rpmfusion_nonfree[ansible_distribution][ansible_distribution_major_version] }}"
-
-  when: ansible_distribution in [ "Amazon", "RedHat", "CentOS", "Fedora", "Rocky", "AlmaLinux" ]
