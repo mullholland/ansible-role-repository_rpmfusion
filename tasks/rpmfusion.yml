@@ -1,5 +1,5 @@
 ---
-- name: Rpmfusion | Importing (free) key
+- name: rpmfusion | Importing (free) key
   ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: present
@@ -11,7 +11,7 @@
     - "{{ repository_rpmfusion_free_key[ansible_distribution][ansible_distribution_major_version] }}"
   when: repository_rpmfusion_free_enable|bool
 
-- name: Rpmfusion | Install Free RPM Fusion Repository
+- name: rpmfusion | Install Free RPM Fusion Repository
   ansible.builtin.yum:
     name: "{{ item }}"
     state: present
@@ -19,7 +19,7 @@
     - "{{ repository_rpmfusion_free[ansible_distribution][ansible_distribution_major_version] }}"
   when: repository_rpmfusion_free_enable|bool
 
-- name: Rpmfusion | Importing (non-free) key
+- name: rpmfusion | Importing (non-free) key
   ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: present
@@ -31,7 +31,7 @@
     - "{{ repository_rpmfusion_nonfree_key[ansible_distribution][ansible_distribution_major_version] }}"
   when: repository_rpmfusion_nonfree_enable|bool
 
-- name: Rpmfusion | Install Nonfree RPM Fusion Repository
+- name: rpmfusion | Install Nonfree RPM Fusion Repository
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
