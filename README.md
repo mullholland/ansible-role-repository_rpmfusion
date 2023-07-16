@@ -36,7 +36,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
       when:
         - ansible_distribution in [ "CentOS", "Rocky", "AlmaLinux" ]
         - ansible_distribution_major_version == "8"
-    - role: robertdebock.epel
+    - role: mullholland.repository_epel
       when:
         - (ansible_distribution == "Amazon" and
           ansible_distribution_major_version == "2") or
