@@ -13,14 +13,19 @@ on:
   schedule:
     - cron: '35 18 18 * *'
 
+# If a 403 error occurs, make sure to set content permission to write
+# see: https://github.com/go-semantic-release/action/issues/27
+permissions:
+  contents: write
+
 jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: ansible-lint
-        uses: ansible-community/ansible-lint-action@main
+      - name: run-ansible-lint
+        uses: ansible/ansible-lint@main
   test:
     needs:
       - lint
@@ -58,3 +63,27 @@ jobs:
           namespace: mullholland
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
+
+  release:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs:
+      - test
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: go-semantic-release/action@v1
+        id: semrel
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          changelog-generator-opt: "emojis=true"
+
+  publish:
+    runs-on: ubuntu-20.04
+    needs:
+      - release
+    steps:
+      - name: galaxy
+        uses: robertdebock/galaxy-action@1.2.1
+        with:
+          galaxy_api_key: ${{ secrets.galaxy_api_key }}
+          git_branch: "main"
