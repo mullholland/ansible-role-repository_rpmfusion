@@ -11,28 +11,26 @@
     molecule_repo_package_free: "x264-libs"
     molecule_repo_package_nonfree: "pgplot"
 
-    # molecule_repo_package:
-    #   RedHat:
-    #     "7":
-    #       - "zork"
-    #     "8":
-    #       - "zork"
-    #   CentOS:
-    #     "7":
-    #       - "zork"
-    #     "8":
-    #       - "zork"
-    #     "9":
-    #       - "zerofree"
-    #   Rocky:
-    #     "8":
-    #       - "zork"
-    #   AlmaLinux:
-    #     "8":
-    #       - "zork"
-    #   Amazon:
-    #     "2":
-    #       - "zork"
+    molecule_repo_package_nonfree_map:
+      RedHat:
+        "7":
+          - "pgplot"
+        "8":
+          - "pgplot"
+        "9":
+          - "xrick"
+      CentOS:
+        "7":
+          - "pgplot"
+        "8":
+          - "pgplot"
+        "9":
+          - "xrick"
+      Amazon: "pgplot"
+      Fedora: "pgplot"
+      default: "pgplot"
+
+      molecule_repo_package_nonfree: "{{ molecule_repo_package_nonfree_map[ansible_distribution][ansible_distribution_major_version] | molecule_repo_package_nonfree_map[ansible_distribution] | default(molecule_repo_package_nonfree_map[ansible_distribution]) | default(pip_os_packages_map['default']) }}"
 
   tasks:
     - name: SmokeTests
