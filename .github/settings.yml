@@ -1,8 +1,0 @@
----
-#
-# Ansible managed
-#
-repository:
-  description: Install the RPM Fusion repository (free and nonfree possible)
-  homepage: https://mullholland.net
-  topics: cloud, development, system, ansible, molecule, tox, playbook

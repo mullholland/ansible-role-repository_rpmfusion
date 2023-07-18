@@ -9,7 +9,6 @@
     molecule_repo_name_free: "rpmfusion-free-updates"
     molecule_repo_name_nonfree: "rpmfusion-nonfree-updates"
     molecule_repo_package_free: "x264-libs"
-    molecule_repo_package_nonfree: "pgplot"
 
     molecule_repo_package_nonfree_map:
       RedHat:
@@ -30,7 +29,7 @@
       Fedora: "pgplot"
       default: "pgplot"
 
-      molecule_repo_package_nonfree: "{{ molecule_repo_package_nonfree_map[ansible_distribution][ansible_distribution_major_version] | molecule_repo_package_nonfree_map[ansible_distribution] | default(molecule_repo_package_nonfree_map[ansible_distribution]) | default(pip_os_packages_map['default']) }}"
+      molecule_repo_package_nonfree: "{{ molecule_repo_package_nonfree_map[ansible_distribution][ansible_distribution_major_version] | molecule_repo_package_nonfree_map[ansible_distribution] | default(molecule_repo_package_nonfree_map['default']) }}"
 
   tasks:
     - name: SmokeTests
