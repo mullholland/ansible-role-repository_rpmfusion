@@ -29,7 +29,7 @@
       Fedora: "pgplot"
       default: "pgplot"
 
-      molecule_repo_package_nonfree: "{{ molecule_repo_package_nonfree_map[ansible_distribution][ansible_distribution_major_version] | molecule_repo_package_nonfree_map[ansible_distribution] | default(molecule_repo_package_nonfree_map['default']) }}"
+    molecule_repo_package_nonfree: "{{ molecule_repo_package_nonfree_map[ansible_distribution][ansible_distribution_major_version] | molecule_repo_package_nonfree_map[ansible_distribution] | default(molecule_repo_package_nonfree_map['default']) }}"
 
   tasks:
     - name: SmokeTests
