@@ -1,3 +1,4 @@
 ---
-- include_tasks: rpmfusion.yml
+- name: Check OS distribution
+  ansible.builtin.include_tasks: rpmfusion.yml
   when: ansible_distribution in [ "Amazon", "RedHat", "CentOS", "Fedora", "Rocky", "AlmaLinux" ]
