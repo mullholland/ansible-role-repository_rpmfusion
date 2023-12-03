@@ -35,7 +35,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
       when:
         - ansible_distribution in [ "CentOS", "Rocky", "AlmaLinux" ]
         - ansible_distribution_major_version == "8"
-    - role: robertdebock.epel
+    - role: mullholland.repository_epel
       when:
         - (ansible_distribution == "Amazon" and
           ansible_distribution_major_version == "2") or
@@ -92,7 +92,10 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 
 repository_rpmfusion_free:
   RedHat:
@@ -135,6 +138,10 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm"
 
 repository_rpmfusion_nonfree_enable: true
 repository_rpmfusion_nonfree_key:
@@ -178,7 +185,10 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
 repository_rpmfusion_nonfree:
   RedHat:
@@ -221,6 +231,10 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm"
 ```
 
 ## [Requirements](#requirements)
@@ -251,7 +265,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 |---------|----|
 |[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
 |[Amazon](https://hub.docker.com/r/mullholland/amazonlinux)|Candidate|
-|[Fedora](https://hub.docker.com/r/mullholland/fedora/)|all|
+|[Fedora](https://hub.docker.com/r/mullholland/fedora/)|38, 39|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
