@@ -41,7 +41,10 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 
 repository_rpmfusion_free:
   RedHat:
@@ -84,6 +87,10 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm"
 
 repository_rpmfusion_nonfree_enable: true
 repository_rpmfusion_nonfree_key:
@@ -127,7 +134,10 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
 repository_rpmfusion_nonfree:
   RedHat:
@@ -170,3 +180,7 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm"

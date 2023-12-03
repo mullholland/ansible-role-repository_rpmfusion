@@ -3,7 +3,7 @@
 # Ansible managed
 #
 
-name: Ansible Molecule
+name: Molecule
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: ansible-lint
         uses: ansible-community/ansible-lint-action@main
   test:
@@ -38,22 +38,20 @@ jobs:
           - image: "amazonlinux"
             tag: "2"
           - image: "fedora"
-            tag: "36"
+            tag: "38"
           - image: "fedora"
             tag: "latest"
-          - image: "fedora"
-            tag: "rawhide"
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: "${{ github.repository }}"
-      - name: disable apparmor for mysql
-        run: sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
-      - name: parse apparmor for mysql
-        run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
+      # - name: disable apparmor for mysql
+      #   run: sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
+      # - name: parse apparmor for mysql
+      #   run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
       - name: molecule
-        uses: robertdebock/molecule-action@5.0.2
+        uses: robertdebock/molecule-action@6.0.1
         with:
           namespace: mullholland
           image: ${{ matrix.config.image }}

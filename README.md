@@ -1,11 +1,10 @@
-# [repository_rpmfusion](#repository_rpmfusion)
+# [Ansible role repository_rpmfusion](#repository_rpmfusion)
 
 Install the RPM Fusion repository (free and nonfree possible)
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_rpmfusion/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions)|[![gitlab](https://gitlab.com/opensourceunicorn/ansible-role-repository_rpmfusion/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_rpmfusion)|[![quality](https://img.shields.io/ansible/quality/57628)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![downloads](https://img.shields.io/ansible/role/d/57628)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_rpmfusion.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/releases/)|
-
+|GitHub|Downloads|Version|
+|------|---------|-------|
+|[![github](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/repository_rpmfusion)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_rpmfusion.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/releases/)|
 ## [Example Playbook](#example-playbook)
 
 This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
@@ -36,12 +35,13 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
       when:
         - ansible_distribution in [ "CentOS", "Rocky", "AlmaLinux" ]
         - ansible_distribution_major_version == "8"
-    - role: robertdebock.epel
+    - role: mullholland.repository_epel
       when:
         - (ansible_distribution == "Amazon" and
           ansible_distribution_major_version == "2") or
           (ansible_distribution in [ "RedHat", "CentOS", "Rocky", "AlmaLinux" ])
 ```
+
 
 
 ## [Role Variables](#role-variables)
@@ -92,7 +92,10 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 
 repository_rpmfusion_free:
   RedHat:
@@ -135,6 +138,10 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm"
 
 repository_rpmfusion_nonfree_enable: true
 repository_rpmfusion_nonfree_key:
@@ -178,7 +185,10 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
     "38":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-
+    "39":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "40":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
 repository_rpmfusion_nonfree:
   RedHat:
@@ -221,12 +231,24 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm"
     "38":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm"
+    "39":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm"
+    "40":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm"
 ```
 
 ## [Requirements](#requirements)
 
 - pip packages listed in [requirements.txt](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/requirements.txt).
 
+## [State of used roles](#state-of-used-roles)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[mullholland.repository_powertools](https://galaxy.ansible.com/mullholland/repository_powertools)|[![Build Status GitHub](https://github.com/mullholland/ansible-role-repository_powertools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions)|[![Build Status GitLab](https://gitlab.com/opensourceunicorn/ansible-role-repository_powertools/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_powertools)|
+|[mullholland.repository_epel](https://galaxy.ansible.com/mullholland/repository_epel)|[![Build Status GitHub](https://github.com/mullholland/ansible-role-repository_epel/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_epel/actions)|[![Build Status GitLab](https://gitlab.com/opensourceunicorn/ansible-role-repository_epel/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_epel)|
 
 ## [Context](#context)
 
@@ -241,9 +263,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/mullholland/docker-centos-systemd/general)|all|
-|[Amazon](https://hub.docker.com/repository/docker/mullholland/docker-amazonlinux-systemd/general)|Candidate|
-|[Fedora](https://hub.docker.com/repository/docker/mullholland/docker-fedora-systemd/general)|all|
+|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
+|[Amazon](https://hub.docker.com/r/mullholland/amazonlinux)|Candidate|
+|[Fedora](https://hub.docker.com/r/mullholland/fedora/)|38, 39|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
@@ -251,7 +273,7 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues)
+If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues).
 
 ## [License](#license)
 
@@ -260,5 +282,3 @@ If you find issues, please register them in [GitHub](https://github.com/mullholl
 ## [Author Information](#author-information)
 
 [Mullholland](https://mullholland.net)
-
-Please consider [sponsoring me](https://github.com/sponsors/mullholland).
