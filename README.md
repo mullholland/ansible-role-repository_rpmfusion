@@ -1,11 +1,10 @@
-# [repository_rpmfusion](#repository_rpmfusion)
+# [Ansible role repository_rpmfusion](#repository_rpmfusion)
 
 Install the RPM Fusion repository (free and nonfree possible)
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_rpmfusion/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions)|[![gitlab](https://gitlab.com/opensourceunicorn/ansible-role-repository_rpmfusion/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_rpmfusion)|[![quality](https://img.shields.io/ansible/quality/57628)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![downloads](https://img.shields.io/ansible/role/d/57628)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_rpmfusion.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/releases/)|
-
+|GitHub|Downloads|Version|
+|------|---------|-------|
+|[![github](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/repository_rpmfusion)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_rpmfusion.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/releases/)|
 ## [Example Playbook](#example-playbook)
 
 This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
@@ -42,6 +41,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
           ansible_distribution_major_version == "2") or
           (ansible_distribution in [ "RedHat", "CentOS", "Rocky", "AlmaLinux" ])
 ```
+
 
 
 ## [Role Variables](#role-variables)
@@ -241,9 +241,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/mullholland/docker-centos-systemd/general)|all|
-|[Amazon](https://hub.docker.com/repository/docker/mullholland/docker-amazonlinux-systemd/general)|Candidate|
-|[Fedora](https://hub.docker.com/repository/docker/mullholland/docker-fedora-systemd/general)|all|
+|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
+|[Amazon](https://hub.docker.com/r/mullholland/amazonlinux)|Candidate|
+|[Fedora](https://hub.docker.com/r/mullholland/fedora/)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
@@ -251,7 +251,7 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues)
+If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues).
 
 ## [License](#license)
 
@@ -260,5 +260,3 @@ If you find issues, please register them in [GitHub](https://github.com/mullholl
 ## [Author Information](#author-information)
 
 [Mullholland](https://mullholland.net)
-
-Please consider [sponsoring me](https://github.com/sponsors/mullholland).
