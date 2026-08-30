@@ -12,7 +12,7 @@
   when: repository_rpmfusion_free_enable|bool
 
 - name: rpmfusion | Install Free RPM Fusion Repository
-  ansible.builtin.yum:
+  ansible.builtin.package:
     name: "{{ item }}"
     state: present
   with_items:

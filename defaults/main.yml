@@ -8,6 +8,8 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   CentOS:
     "7":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-7"
@@ -15,19 +17,22 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   Rocky:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   AlmaLinux:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
-  Amazon:
-    "2":
-      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-7"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   Fedora:
     "33":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
@@ -45,6 +50,12 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     "40":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "41":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "42":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "43":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 
 repository_rpmfusion_free:
   RedHat:
@@ -54,6 +65,8 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   CentOS:
     "7":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm"
@@ -61,19 +74,22 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   Rocky:
     "8":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   AlmaLinux:
     "8":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
-  Amazon:
-    "2":
-      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   Fedora:
     "33":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm"
@@ -91,6 +107,12 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
     "40":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm"
+    "41":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-41.noarch.rpm"
+    "42":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-42.noarch.rpm"
+    "43":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-43.noarch.rpm"
 
 repository_rpmfusion_nonfree_enable: true
 repository_rpmfusion_nonfree_key:
@@ -101,6 +123,8 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   CentOS:
     "7":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-7"
@@ -108,19 +132,22 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   Rocky:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   AlmaLinux:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
-  Amazon:
-    "2":
-      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-7"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   Fedora:
     "33":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
@@ -138,6 +165,12 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
     "40":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "41":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "42":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "43":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
 repository_rpmfusion_nonfree:
   RedHat:
@@ -147,6 +180,8 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   CentOS:
     "7":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm"
@@ -154,19 +189,22 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   Rocky:
     "8":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   AlmaLinux:
     "8":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
-  Amazon:
-    "2":
-      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   Fedora:
     "33":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-33.noarch.rpm"
@@ -184,3 +222,9 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm"
     "40":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm"
+    "41":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-41.noarch.rpm"
+    "42":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm"
+    "43":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-43.noarch.rpm"
