@@ -4,7 +4,7 @@ This software implements other software, it's not very likely that this software
 
 ## [Reporting a Vulnerability](#reporting-a-vulnarability)
 
-Please [open an issue](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues) describing the vulnerability.
+Please [open an issue](https://github.com/mullholland/ansible-role-ansible-generator/issues) describing the vulnerability.
 
 Tell them where to go, how often they can expect to get an update on a
 reported vulnerability, what to expect if the vulnerability is accepted or

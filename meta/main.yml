@@ -12,18 +12,14 @@ galaxy_info:
     - name: EL
       versions:
         - all
-    - name: Amazon
-      versions:
-        - all
     - name: Fedora
       versions:
         - all
-    - name: Rocky
-      versions:
-        - all
-    - name: AlmaLinux
-      versions:
-        - all
+        # Rocky and AlmaLinux are declared via meta/preferences.yml's
+        # extra_platforms instead of here: the Galaxy schema only accepts
+        # "all" or a fixed legacy enum for these platforms' versions, so
+        # the "8-9" subset (see preferences.yml comment) can't be
+        # expressed here.
 
   galaxy_tags:
     - cloud

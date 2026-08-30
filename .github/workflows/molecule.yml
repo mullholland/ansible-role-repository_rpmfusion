@@ -13,7 +13,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '35 18 18 * *'
+    - cron: '1 1 1 * *'
 
 jobs:
   lint:
@@ -31,28 +31,20 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "amazonlinux"
-            tag: "2023"
           - image: "fedora"
             tag: "42"
           - image: "fedora"
             tag: "43"
+          - image: "centos"
+            tag: "9"
           - image: "rockylinux"
             tag: "8"
           - image: "rockylinux"
             tag: "9"
-          - image: "rockylinux"
-            tag: "10"
           - image: "almalinux"
             tag: "8"
           - image: "almalinux"
             tag: "9"
-          - image: "almalinux"
-            tag: "10"
-          - image: "centos"
-            tag: "9"
-          - image: "centos"
-            tag: "10"
     env:
       namespace: mullholland
       image: ${{ matrix.config.image }}

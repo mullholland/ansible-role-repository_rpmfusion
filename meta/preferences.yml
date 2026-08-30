@@ -4,7 +4,21 @@
 # CentOS isn't a valid Galaxy platform name (only "EL" is), but the role
 # explicitly supports it (see tasks/main.yml), so it's added to the CI
 # matrix and README compatibility table here instead.
+#
+# Rocky and AlmaLinux are also declared here rather than in
+# meta/main.yml's galaxy_info.platforms: RPM Fusion's nonfree EL10 repo is
+# still very early (only ~20 packages, all hardware-driver specific) and
+# doesn't carry the package this role's molecule tests smoke-test with, so
+# EL10 is dropped for now. The Galaxy schema only accepts "all" or a fixed
+# legacy enum for these platforms' versions under galaxy_info.platforms, so
+# the "8-9"/"9" subset can only be expressed via this schema-exempt file.
 extra_platforms:
   - name: CentOS
     versions:
-      - all
+      - "9"
+  - name: Rocky
+    versions:
+      - "8-9"
+  - name: AlmaLinux
+    versions:
+      - "8-9"

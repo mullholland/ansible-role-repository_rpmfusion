@@ -1,13 +1,13 @@
-# [Ansible role repository_rpmfusion](#repository_rpmfusion)
+# [Ansible role ansible-generator](#ansible-generator)
 
 Install the RPM Fusion repository (free and nonfree possible)
 
 |GitHub|Downloads|Version|
 |------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/repository_rpmfusion)](https://galaxy.ansible.com/mullholland/repository_rpmfusion)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_rpmfusion.svg)](https://github.com/mullholland/ansible-role-repository_rpmfusion/releases/)|
+|[![github](https://github.com/mullholland/ansible-role-ansible-generator/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-ansible-generator/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/ansible-generator)](https://galaxy.ansible.com/mullholland/ansible-generator)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-ansible-generator.svg)](https://github.com/mullholland/ansible-role-ansible-generator/releases/)|
 ## [Example Playbook](#example-playbook)
 
-This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-ansible-generator/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
 ---
@@ -20,7 +20,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
     - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') }}"
 ```
 
-The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/molecule/default/prepare.yml):
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/mullholland/ansible-role-ansible-generator/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
@@ -43,7 +43,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ## [Role Variables](#role-variables)
 
-The default values for the variables are set in [`defaults/main.yml`](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/defaults/main.yml):
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/mullholland/ansible-role-ansible-generator/blob/master/defaults/main.yml):
 
 ```yaml
 ---
@@ -56,6 +56,8 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   CentOS:
     "7":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-7"
@@ -63,19 +65,22 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   Rocky:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   AlmaLinux:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
-  Amazon:
-    "2":
-      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-7"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-10"
   Fedora:
     "33":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
@@ -93,6 +98,12 @@ repository_rpmfusion_free_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     "40":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "41":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "42":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+    "43":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 
 repository_rpmfusion_free:
   RedHat:
@@ -102,6 +113,8 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   CentOS:
     "7":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm"
@@ -109,19 +122,22 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   Rocky:
     "8":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   AlmaLinux:
     "8":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
-  Amazon:
-    "2":
-      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-10.noarch.rpm"
   Fedora:
     "33":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm"
@@ -139,6 +155,12 @@ repository_rpmfusion_free:
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
     "40":
       - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm"
+    "41":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-41.noarch.rpm"
+    "42":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-42.noarch.rpm"
+    "43":
+      - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-43.noarch.rpm"
 
 repository_rpmfusion_nonfree_enable: true
 repository_rpmfusion_nonfree_key:
@@ -149,6 +171,8 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   CentOS:
     "7":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-7"
@@ -156,19 +180,22 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   Rocky:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   AlmaLinux:
     "8":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-8"
     "9":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
-  Amazon:
-    "2":
-      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-7"
+    "10":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-10"
   Fedora:
     "33":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
@@ -186,6 +213,12 @@ repository_rpmfusion_nonfree_key:
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
     "40":
       - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "41":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "42":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    "43":
+      - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
 repository_rpmfusion_nonfree:
   RedHat:
@@ -195,6 +228,8 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   CentOS:
     "7":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm"
@@ -202,19 +237,22 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   Rocky:
     "8":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   AlmaLinux:
     "8":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm"
     "9":
       - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
-  Amazon:
-    "2":
-      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm"
+    "10":
+      - "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-10.noarch.rpm"
   Fedora:
     "33":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-33.noarch.rpm"
@@ -232,11 +270,17 @@ repository_rpmfusion_nonfree:
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm"
     "40":
       - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm"
+    "41":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-41.noarch.rpm"
+    "42":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm"
+    "43":
+      - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-43.noarch.rpm"
 ```
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/mullholland/ansible-role-ansible-generator/blob/master/requirements.txt).
 
 ## [State of used roles](#state-of-used-roles)
 
@@ -258,11 +302,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 |container|tags|
 |---------|----|
 |[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
-|[Amazon](https://hub.docker.com/r/mullholland/amazonlinux)|all|
 |[Fedora](https://hub.docker.com/r/mullholland/fedora/)|all|
-|[Rocky](https://hub.docker.com/r/mullholland/rockylinux)|all|
-|[AlmaLinux](https://hub.docker.com/r/mullholland/almalinux)|all|
-|[CentOS](https://hub.docker.com/r/mullholland/centos)|all|
+|[CentOS](https://hub.docker.com/r/mullholland/centos)|9|
+|[Rocky](https://hub.docker.com/r/mullholland/rockylinux)|8-9|
+|[AlmaLinux](https://hub.docker.com/r/mullholland/almalinux)|8-9|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
@@ -270,11 +313,11 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The previous version.
 - The current version.
 
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_rpmfusion/issues).
+If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-ansible-generator/issues).
 
 ## [License](#license)
 
-[MIT](https://github.com/mullholland/ansible-role-repository_rpmfusion/blob/master/LICENSE).
+[MIT](https://github.com/mullholland/ansible-role-ansible-generator/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
